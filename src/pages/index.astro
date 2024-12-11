@@ -3,6 +3,10 @@ import BaseLayout from '@/layouts/BaseLayout.astro'
 import siteConfig from '@/site-config'
 ---
 
-<BaseLayout description={siteConfig.description}>
+<div id="loading-overlay" class="loading-overlay">
+  <div class="loading-spinner"></div>
+</div>
+
+<BaseLayout description={siteConfig.description} title="Home">
   <article class="prose"></article>
 </BaseLayout>
