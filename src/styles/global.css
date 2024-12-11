@@ -7,6 +7,22 @@ html.dark .astro-code span {
   text-decoration: var(--shiki-dark-text-decoration) !important;
 }
 
+@font-face {
+  font-family: 'Spotify';
+  src: url('/fonts/saraththarayil-font.woff2') format('woff2-variations');
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Spotify';
+  src: url('/fonts/saraththarayil-italic-font.woff2') format('woff2-variations');
+  font-weight: 100 800;
+  font-style: italic;
+  font-display: swap;
+}
+
 html.dark {
   color-scheme: dark;
 }

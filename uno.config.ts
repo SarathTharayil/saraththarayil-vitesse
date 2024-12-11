@@ -25,6 +25,7 @@ export default defineConfig({
     },
     {
       'hr-line': 'w-14 mx-auto my-8 border-solid border-1px !border-truegray-200 !dark:border-truegray-800',
+      'font-spotify': 'font-spotify',
     },
   ],
   presets: [
@@ -42,6 +43,7 @@ export default defineConfig({
       fonts: {
         sans: 'Inter:400,600,800',
         mono: 'DM Mono:400,600',
+        serif: 'Spotify',
       },
     }),
   ],
@@ -60,4 +62,11 @@ export default defineConfig({
     'i-ri-github-line',
     'i-ri-twitter-x-line',
   ],
+  theme: {
+    extend: {
+      fontFamily: {
+        spotify: ['Spotify', 'sans-serif'],
+      },
+    },
+  },
 })
