@@ -3,6 +3,8 @@ import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import UnoCSS from 'unocss/astro'
 import vue from '@astrojs/vue'
+import react from '@astrojs/react'
+import tailwind from '@astrojs/tailwind'
 
 export default defineConfig({
   site: 'https://astro-theme-vitesse.netlify.app/',
@@ -11,6 +13,8 @@ export default defineConfig({
   },
   integrations: [
     mdx(),
+    react(),
+    tailwind(),
     sitemap(),
     UnoCSS({
       injectReset: true,
