@@ -8,7 +8,31 @@ import Now from '../components/sections/Now.astro'
 import CVCard from '../components/sections/CVCard.astro'
 import ExperienceCard from '../components/sections/ExperienceCard.astro'
 import TattooCard from '../components/sections/TattooCard.astro'
+import { motion, AnimatePresence } from 'framer-motion'
 ---
+
+<script>
+  import { stagger, spring, timeline, type TimelineDefinition } from 'motion'
+  import { loaderAnimation } from '../lib/constants'
+
+  const cards = document.querySelectorAll('.card-animate')
+
+  const sequence = [
+    loaderAnimation,
+    [
+      cards,
+      { y: ['40%', '0%'], opacity: [0, 1] },
+      {
+        at: '-0.1',
+        duration: 0.1,
+        delay: stagger(0.3),
+        easing: spring({ velocity: 100, stiffness: 50, damping: 10 }),
+      },
+    ],
+  ]
+
+  timeline(sequence as TimelineDefinition)
+</script>
 
 <BaseLayout>
   <main
