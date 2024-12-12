@@ -3,19 +3,20 @@ import Card from '../Card.astro'
 import { LINKS } from '../../lib/constants'
 ---
 
-<Card colSpan="md:col-span-3" rowSpan="md:row-span-1">
+<Card
+  colSpan="md:col-span-1 sm:col-span-1 lg:col-span-2"
+  rowSpan="sm:row-span-1 md:row-span-1 lg:row-span-1"
+>
   <div class="h-full">
     <header class="flex items-center">
-      <h1 class="text-xl font-bold text-foreground">
-        Let's start working together!
-      </h1>
+      <h1 class="text-xl font-bold text-foreground">Work together!</h1>
     </header>
-    <address class="mt-4 flex flex-col">
+    <address class="mt-4 flex flex-col not-italic">
       <h2 class="text-gray-500">Contact Details</h2>
       <p>iamsaraththarayil@gmail.com</p>
       <p>Sheffield, United Kingdom</p>
     </address>
-    <div class="mt-4 flex w-fit flex-col">
+    <!-- <div class="mt-4 flex w-fit flex-col">
       <h2 class="text-gray-500">Socials</h2>
       <ul>
         <li>
@@ -28,6 +29,6 @@ import { LINKS } from '../../lib/constants'
           <a href={LINKS.instagram} target="_blank">Instagram</a>
         </li>
       </ul>
-    </div>
+    </div> -->
   </div>
 </Card>

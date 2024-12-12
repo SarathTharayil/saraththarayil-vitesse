@@ -78,3 +78,17 @@ html.dark::view-transition-old(root) {
 html.dark::view-transition-new(root) {
   z-index: 1;
 }
+
+/* frosted glass effect */
+.card {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    145deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(8, 8, 8, 0.1) 100%
+  );
+  border-radius: 10px;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  box-shadow: 0px 1px 24px -1px rgba(0, 0, 0, 0.1);
+}
