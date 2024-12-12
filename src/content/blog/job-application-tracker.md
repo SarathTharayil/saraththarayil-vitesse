@@ -2,7 +2,7 @@
 title: Job Application Tracker with Streamlit
 description: Building a lightweight, user-friendly tool to streamline and organize my job application process.
 image:
-    src: "../public/View1.png"
+    src: "/job-app-tracker-image.png"
     alt: "Image"
 date: 2024-12-07
 ---
