@@ -5,6 +5,8 @@ export type PostKey = 'blog'
 export type CollectionPosts = CollectionEntry<PostKey>
 
 export type Pages = 'pages'
+export type Page = 'pages'
+export type Site = 'pages'
 
 export type CollectionPages = CollectionEntry<Pages>
 

@@ -2,86 +2,24 @@ import type { ProjectData } from '@/types'
 
 export const projectData: ProjectData = [
   {
-    title: 'Projects Group',
+    title: 'Fun Projects',
     projects: [
       {
-        text: 'Project Name',
-        description: 'Your project description information is a long piece of text.',
+        text: 'Wordle Clone',
+        description: 'Made a wordle clone using Vite JS',
         icon: 'i-carbon-campsite',
-        href: '/',
-      },
-      {
-        text: 'Project Name',
-        description: 'Your project description information is a long piece of text.',
-        icon: 'i-carbon-campsite',
-        href: '/',
+        href: 'https://wordle.saraththarayil.com',
       },
     ],
   },
   {
-    title: 'Projects Group',
+    title: 'Streamlit Apps',
     projects: [
       {
-        text: 'Project Name',
-        description: 'Your project description information is a long piece of text.',
+        text: 'Job Tracker App',
+        description: 'Tool to organize job applications',
         icon: 'i-carbon-campsite',
-        href: '/',
-      },
-      {
-        text: 'Project Name',
-        description: 'Your project description information is a long piece of text.',
-        icon: 'i-carbon-campsite',
-        href: '/',
-      },
-      {
-        text: 'Project Name',
-        description: 'Your project description information is a long piece of text.',
-        icon: 'i-carbon-campsite',
-        href: '/',
-      },
-    ],
-  },
-  {
-    title: 'Project Name',
-    projects: [],
-  },
-  {
-    title: 'Projects Group',
-    projects: [
-      {
-        text: 'Project Name',
-        description: 'Your project description information is a long piece of text.',
-        icon: 'i-carbon-campsite',
-        href: '/',
-      },
-      {
-        text: 'Project Name',
-        description: 'Your project description information is a long piece of text.',
-        icon: 'i-carbon-campsite',
-        href: '/',
-      },
-      {
-        text: 'Project Name',
-        description: 'Your project description information is a long piece of text.',
-        icon: 'i-carbon-campsite',
-        href: '/',
-      },
-      {
-        text: 'Project Name',
-        description: 'Your project description information is a long piece of text.',
-        icon: 'i-carbon-campsite',
-        href: '/',
-      },
-    ],
-  },
-  {
-    title: 'Projects Group',
-    projects: [
-      {
-        text: 'Project Name',
-        description: 'Your project description information is a long piece of text.',
-        icon: 'i-carbon-campsite',
-        href: '/',
+        href: 'https://jobtracker.streamlit.app/',
       },
     ],
   },
