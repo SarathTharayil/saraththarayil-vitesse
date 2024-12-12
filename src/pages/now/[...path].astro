@@ -64,14 +64,16 @@ export async function getStaticPaths() {
           ))
         }
       </p>
-      If you have any questions, please email me at
-      <a
-        prose-link
-        aria-label={siteConfig.email}
-        href={`mailto:${siteConfig.email}`}
-      >
-        {siteConfig.email}
-      </a>.
+      <p>
+        If you have any questions, please email me at
+        <a
+          prose-link
+          aria-label={siteConfig.email}
+          href={`mailto:${siteConfig.email}`}
+        >
+          {siteConfig.email}
+        </a>.
+      </p>
     </div>
   </article>
 </BaseLayout>
