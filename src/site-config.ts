@@ -2,7 +2,7 @@ export const siteConfig = {
   author: 'Sarath Tharayil',
   title: 'Sarath Tharayil',
   subtitle: '',
-  description: 'A Minimal, SEO-friendly portfolio and blog theme for Astro.',
+  description: '',
   image: {
     src: '/hero.jpg',
     alt: 'Website Main Image',
@@ -28,12 +28,12 @@ export const siteConfig = {
     },
     {
       text: 'Instagram',
-      href: '',
+      href: 'https://www.instagram.com/in/sarath_tharayil',
       icon: 'i-simple-icons-instagram',
     },
     {
       text: 'Youtube',
-      href: '',
+      href: 'https://www.youtube.com/@alphapinger',
       icon: 'i-simple-icons-youtube',
     },
   ],
@@ -59,6 +59,10 @@ export const siteConfig = {
         text: 'Projects',
         href: '/projects',
       },
+      {
+        text: 'Now',
+        href: '/now',
+      },
     ],
   },
   page: {
@@ -68,13 +72,17 @@ export const siteConfig = {
         href: '/blog',
       },
       {
-        text: 'Notes',
-        href: '/blog/notes',
+        text: 'Now',
+        href: '/now',
       },
-      {
-        text: 'Talks',
-        href: '/blog/talks',
-      },
+      // {
+      //   text: 'Notes',
+      //   href: '/blog/notes',
+      // },
+      // {
+      //   text: 'Talks',
+      //   href: '/blog/talks',
+      // },
     ],
   },
   footer: {

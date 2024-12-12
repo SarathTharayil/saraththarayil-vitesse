@@ -7,11 +7,17 @@ import ContactsCard from '../components/sections/ContactsCard.astro'
 import Now from '../components/sections/Now.astro'
 import CVCard from '../components/sections/CVCard.astro'
 import ExperienceCard from '../components/sections/ExperienceCard.astro'
+import SpotifyPresence from '@/components/bento/SpotifyPresence.tsx'
+import TimeZoneCard from '@/components/sections/TimeZoneCard.astro'
+import BatCat from '@/components/ui/batcat'
+import { cn } from 'src/lib/utils.ts'
+
+import { Icon } from 'astro-icon/components'
 import TattooCard from '../components/sections/TattooCard.astro'
 import { motion, AnimatePresence } from 'framer-motion'
 ---
 
-<script>
+<!-- <script>
   import { stagger, spring, timeline, type TimelineDefinition } from 'motion'
   import { loaderAnimation } from '../lib/constants'
 
@@ -32,13 +38,11 @@ import { motion, AnimatePresence } from 'framer-motion'
   ]
 
   timeline(sequence as TimelineDefinition)
-</script>
-
+</script> -->
 <BaseLayout>
   <main
     class="relative grid w-full
-           grid-cols-1
-           gap-4
+           gap-2
            overflow-hidden
            p-4
            sm:grid-cols-2
@@ -47,30 +51,42 @@ import { motion, AnimatePresence } from 'framer-motion'
            [&>*]:h-auto"
   >
     <IntroCard class="sm:col-span-2 lg:col-span-2 lg:row-span-2" />
+
     <AboutMe class="sm:col-span-1 lg:col-span-2 lg:row-span-2" />
+
     <CVCard />
+
     <Now />
+
+    <!-- <Card
+    className={cn(
+      "sm:col-span-2 lg:col-span-2 lg:row-span-2",
+      isHighlighted && "border-2 border-blue-500"
+    )}
+    >
+    <BatCat />
+    </Card> -->
+
     <Card
       colSpan="sm:col-span-2 lg:col-span-1"
       rowSpan="lg:row-span-1"
-      title="Portfolio & Projects"
-      href="https://wordle.saraththarayil.com"
-    />
-    <Card
-      colSpan="sm:col-span-2 lg:col-span-2"
-      rowSpan="lg:row-span-1"
-      title="Portfolio & Projects"
-      href="/portfolio"
-    />
+      title="Projects"
+      href="/projects"
+    >
+      <!-- <BatCat/> -->
+    </Card>
     <ExperienceCard />
+
     <Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
-      <div class="flex h-full flex-col justify-between">
-        <blockquote class="mt-6 border-l-2 pl-6 italic">
-          "Anything one man can imagine, other men can make real."
-        </blockquote>
-        <p class="mt-2 text-xs">- Jules Verne</p>
+      <div>
+        <div
+          class="overlay absolute inset-0 z-0 size-full rounded-3xl bg-[url('/static/bento/spotify.webp')] bg-cover bg-center bg-no-repeat transition-opacity duration-200 xl:opacity-0"
+        >
+        </div>
+        <SpotifyPresence client:load />
       </div>
     </Card>
+
     <Card colSpan="md:col-span-2" rowSpan="md:row-span-1">
       <div class="flex h-full flex-col justify-between">
         <blockquote class="mt-6 border-l-2 pl-6 italic">
@@ -79,6 +95,7 @@ import { motion, AnimatePresence } from 'framer-motion'
         <p class="mt-2 text-xs">- Jules Verne</p>
       </div>
     </Card>
+    <TimeZoneCard />
     <ContactsCard />
   </main>
 </BaseLayout>

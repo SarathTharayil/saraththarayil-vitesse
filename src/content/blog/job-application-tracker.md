@@ -1,10 +1,10 @@
 ---
-title: Blog Title
-description: Your blog description, which is long text, can be an introduction to the post or a paragraph of the post.
+title: Job Application Tracker with Streamlit
+description: Building a lightweight, user-friendly tool to streamline and organize my job application process.
 image:
     src: "../public/View1.png"
     alt: "Image"
-date: 2024-05-01
+date: 2024-12-07
 ---
 ## Introduction
 
@@ -13,8 +13,6 @@ In the modern job market, keeping track of multiple applications can quickly bec
 In this blog, I'll walk you through the key functionalities of the app, its design considerations, and how it achieves seamless data management. By the end, you’ll have a comprehensive understanding of how this app works and how you can customize it for your needs.
 
 The tracker feeds the a blog page to show the current working of the streamlit app. See this <a href="/blog/job-applications" title="blog">blog</a>. The app is deployed <a href="https://jobtracker.streamlit.app/" target= "_blank" title="blog">here</a>.
-
----
 
 ## Core Functionalities
 
@@ -27,8 +25,6 @@ The **Job Applications Tracker** revolves around a user-friendly interface with 
 5. **Export to Multiple Formats**: Save data in CSV, JSON, and JSX formats for further use or integration.
 6. **Dynamic UI Updates**: Real-time data refreshes ensure an updated display of all applications without requiring manual reloads.
 
----
-
 ## Implementation Highlights
 
 ### File and Data Management
@@ -39,8 +35,6 @@ The app uses **pandas** for data manipulation and **shutil** for file handling. 
 - **JSX**: Generates a React-compatible file for direct integration with web applications.
 
 To ensure reliability, the app creates a backup file (`job_applications_backup.csv`) and allows users to restore the main data file if needed.
-
----
 
 ### Adding Applications
 
@@ -60,8 +54,6 @@ The app validates inputs to ensure:
 
 Upon submission, the new application is appended to the existing data and saved across all formats.
 
----
-
 ### Editing and Deleting Applications
 
 A **dropdown menu** on the main page allows users to select an application based on its **company and designation**. Once selected, users can:
@@ -70,13 +62,9 @@ A **dropdown menu** on the main page allows users to select an application based
 
 These actions dynamically update the data stored in CSV, JSON, and JSX formats, ensuring consistency.
 
----
-
 ### JSX Integration
 
 The JSX export functionality generates a React-compatible file containing all job applications as an array of objects. This feature is particularly useful for developers who wish to integrate the tracker with their websites. The JSX file is stored in a customizable directory, and its last modification time is displayed on the app's main page for transparency.
-
----
 
 ### Backup and Restore
 
@@ -85,8 +73,6 @@ Data reliability is critical. The app allows users to:
 - **Restore Data**: Recover the main file using the backup if accidental deletion or corruption occurs.
 
 These operations are seamless, ensuring users never lose their data.
-
----
 
 ## Technical Overview
 
@@ -110,8 +96,6 @@ The main page displays:
 2. **`generate_jsx_file(job_data)`**: Converts job applications to a JavaScript array for use in React applications. Each application object is formatted with key-value pairs.
 3. **`clear_csv()`**: Empties the CSV file while retaining the column structure, providing a clean slate for new entries.
 4. **`restore_csv_from_backup()`**: Copies the backup file to the original location without deleting the backup, ensuring data recovery.
-
----
 
 ## Code Snippet: JSX Export Example
 
@@ -143,7 +127,6 @@ export const jobApplications = [
   },
 ]
 ```
----
 
 ## Challenges and Solutions
 
@@ -158,8 +141,6 @@ export const jobApplications = [
 ### Handling Duplicate Entries
 - **Challenge**: Preventing duplicate company-designation pairs.
 - **Solution**: Added validation in the **Add Application Form** to check for existing entries before submission.
-
----
 
 ## Future Improvements
 

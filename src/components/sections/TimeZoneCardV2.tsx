@@ -16,7 +16,7 @@ function Timezone({ timezone }: any) {
   return (
     <div>
       <p>{dateTime}</p>
-      <p className="text-sm text-gray-500">🇨🇴 Bogotá D.C, Colombia 🇨🇴</p>
+      <p className="text-sm text-gray-500">Sheffield, United Kingdom</p>
     </div>
   )
 }

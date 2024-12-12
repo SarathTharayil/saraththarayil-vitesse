@@ -1,0 +1,77 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import siteConfig from '@/site-config'
+import { getPosts } from '@/utils/posts'
+import { type CollectionPosts } from '@/types'
+
+export async function getStaticPaths() {
+  const posts = await getPosts()
+  return posts.map((post) => {
+    return {
+      params: { slug: post.slug },
+      props: {
+        post,
+      },
+    }
+  })
+}
+---
+
+<BaseLayout description={siteConfig.description}>
+  <article class="prose">
+    <h1 class="text-title" style="margin-bottom: 10px;">Now</h1>
+    <h4>What I've been upto!</h4>
+    <p></p>
+    <div class="text-justify">
+      <p>
+        <b>12<sup>th</sup> December, 2024</b><br />
+        I’m currently updating my personal website, transitioning from <a
+          href="https://nextjs.org/"
+          target="_blank">NextJS</a
+        > to <a href="https://astro.build/" target="_blank">AstroJS</a>. The
+        site previously used the <a
+          href="https://github.com/chronark/chronark.com"
+          target="_blank">Chronark</a
+        > starter template, but for this update, I’m now utilizing the <a
+          href="https://astro-theme-vitesse.netlify.app/"
+          target="_blank">Vitesse</a
+        > theme from AstroJS.
+      </p>
+      <p>
+        <b>6<sup>th</sup> December, 2024</b><br />
+        Attempted to replicate a website, which is how I was introduced to AstroJS.
+        The current deployment is live and can be found
+        <a href="https://saraththarayil1.vercel.app/" target="_blank">here</a>
+        . Eventually got bored with the design and decided to explore an alternate
+        idea. The original design was image-heavy, which negatively impacted the
+        website's performance. Switched to a simpler design, thus improving the load
+        times and reducing the time spent on graphic design as well.
+      </p>
+      <hr class="hr-line" />
+      <p>Find me on</p>
+      <p class="flex gap-x-4 gap-y-2 flex-wrap">
+        {
+          siteConfig.socialLinks.map((link) => (
+            <a
+              aria-label={link.text}
+              href={link.href}
+              target="_blank"
+              class="prose-link"
+            >
+              <i class:list={[link.icon]} />
+              {link.text}
+            </a>
+          ))
+        }
+      </p>
+      If you have any questions, please email me at
+      <a
+        prose-link
+        aria-label={siteConfig.email}
+        href={`mailto:${siteConfig.email}`}
+      >
+        {siteConfig.email}
+      </a>.
+    </div>
+  </article>
+</BaseLayout>
